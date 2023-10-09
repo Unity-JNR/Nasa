@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0%;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        
+
+        header{
+            background: linear-gradient(to right,purple,black);
+            padding: 20px;
+            text-align: center;
+            
+        }
+        h1{
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .start-button{
+            background:linear-gradient(to left, purple, black);
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none; 
+            text-align: center;
+           display: inline-block;
+            
+        }
+        .page{
+            display: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+     <h1> N-A-S-A</h1>
+     <P> Welcome to our store, where we sell clothes for youth to enjoy</P>
+    </header>
+    
+
+    <main>
+        <div class="page" id="page1">
+            <h2>what we have</h2>
+
+
+        </div>
+
+        <div class="page" id="page2">
+            <h3>links</h3>
+            <ul>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="checkout.html">checkout</a></li>
+                <li><a href="product page.html">product </a></li>
+                <li><a href="About.html">About us</a></li>
+            </ul>
+
+
+        </div>
+    </main>
+
+    <button class="start-button" id="start-button">Click here to start</button>
+    
+
+    <script>
+        const startButton = document.getElementById('start-button');
+        const pages = document.querySelectorAll('.page');
+        let currentPageIndex = 0;
+
+        startButton.addEventListener('click', ()=> {
+            if(currentPageIndex<pages.length){
+                pages[currentPageIndex ].style.display = "none";
+                currentPageIndex++;
+                if(currentPageIndex<pages.length){
+                    pages[currentPageIndex].style.display = "block";
+                }
+            }
+        })
+    </script>
+
+
+<footer>
+    @2023 Unity Demas
+</footer>
+
+
+
+</body>
+</html>
